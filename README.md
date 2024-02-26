@@ -13,10 +13,10 @@ In this tutorial we will go over  ```/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2
 - [Character Classes](#character-classes)
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
-- [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+- [Character Escapes](#character-escapes)
+- [References](#references)
+- [Author](#author)
+
 
 ## Regex Components
 
@@ -41,7 +41,7 @@ Quanitfiers connect parts of the code in the string.  For exmple this code uses 
 ### Character Classes
 
 
-```\d```is one of the most basic regex character class that will return and any digit from 0-9.  You can also see them as the total enclosed in asquare brackets ```[]```.
+```\d```is one of the most basic regex character class that will return and any digit from 0-9.  
 
 
 ### View them in the code below
@@ -63,7 +63,7 @@ Grouping and Caputuring in regex is defined by code placed between two square ba
 
 
 ### Bracket Expressions
-THis line of code has three bracketed expressions that correlate to each part of an email address.
+This line of code has three bracketed expressions that correlate to each part of an email address.
 
 [a-z0-9_\.-] This expression matches the username and allows it to have any letters and numbers 0-9.  It also allows additional charecters such as an underscore "_", Perios ".", and a dash "-".
 
@@ -71,15 +71,35 @@ THis line of code has three bracketed expressions that correlate to each part of
 
 [a-z\.]{2,6}  Last but not least is the .com code which allows you to match any letter and in the length from 2  characters to 6.
 
-### Greedy and Lazy Match
+
+### View them in the code below
+```regex
+ /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+ ```
 
 
 
-### Boundaries
+### Character Escapes
 
-### Back-references
+```\``` Is a character escape that sllows for specific charecters to be used. In our code there is a ``\.`` which allows for the . in .com to be conctant and always there.
 
-### Look-ahead and Look-behind
+### View them in the code below
+```regex
+ /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+ ```
+
+### References
+
+https://www.youtube.com/watch?v=7DG3kCDx53c
+
+https://www.fon.hum.uva.nl/praat/manual/Regular_expressions_1__Special_characters.html
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes
+
+https://eloquentjavascript.net/09_regexp.html
+
+https://regexr.com/3e48o
+
 
 ## Author
 
