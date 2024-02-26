@@ -53,9 +53,27 @@ Quanitfiers connect parts of the code in the string.  For exmple this code uses 
 
 ### Grouping and Capturing
 
+Grouping and Caputuring in regex is defined by code placed between two square baracket ```()``.  This regex code has three groupings.  One is the email name ([a-z0-9_\.-]+) , Two is the email servicer name ([\da-z\.-]+)\ and three is the .com name at the end ([a-z\.]{2,6}).
+
+### View them in the code below
+```regex
+ /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+ ```
+
+
+
 ### Bracket Expressions
+THis line of code has three bracketed expressions that correlate to each part of an email address.
+
+[a-z0-9_\.-] This expression matches the username and allows it to have any letters and numbers 0-9.  It also allows additional charecters such as an underscore "_", Perios ".", and a dash "-".
+
+[\da-z\.-]  This expression is for the domain name and allows you to match any digit, letters and additional charaters period "." and dash "-".
+
+[a-z\.]{2,6}  Last but not least is the .com code which allows you to match any letter and in the length from 2  characters to 6.
 
 ### Greedy and Lazy Match
+
+
 
 ### Boundaries
 
@@ -65,4 +83,4 @@ Quanitfiers connect parts of the code in the string.  For exmple this code uses 
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+This was written by Greg Adams a Firefighter Paramedic trying to be a coder. Check out some of my work here at: https://github.com/GADAMS45
